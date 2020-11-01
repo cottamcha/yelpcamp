@@ -7,12 +7,13 @@
 <div class="card mb-4">
     <div class="row">
         <div class="col-md-4">
-            <%if(campground.images.length) {%>
-            <img class="img-fluid" alt="" src="<%=campground.images[0].url%>">
-            <% }else {%>
-            <img class="img-fluid" alt=""
+                <%if(campground.images.length) {%>
+                <img class="img-fluid" alt="" src="<%=campground.images[0].homeCropped%>" >
+                <% }else {%>
+                <img class="img-fluid" alt=""
                 src="https://res.cloudinary.com/hazederlad/image/upload/v1604176633/YelpCamp/ggg_jzwwid.png">
-            <% } %>
+                <% } %>
+        
         </div>
         <div class="col-md-8">
             <div class="card-body">
