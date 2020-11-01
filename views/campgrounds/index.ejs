@@ -1,6 +1,8 @@
 <% layout('layouts/boilerplate')%>
-<div id="cluster-map">
-</div>
+
+
+<div id="cluster-map"></div>
+
 <h1 class="mb-3 text-center">All Campgrounds</h1>
 
 <% for (let campground of campgrounds){%>
@@ -8,7 +10,7 @@
     <div class="row">
         <div class="col-md-4">
                 <%if(campground.images.length) {%>
-                <img class="img-fluid" alt="" src="<%=campground.images[0].homeCropped%>" height="400px" width="600px" >
+                <img class="img-fluid" alt="" src="<%=campground.images[0].homeCrop%>" height="400px" width="600px" >
                 <% }else {%>
                 <img class="img-fluid" alt=""
                 src="https://res.cloudinary.com/hazederlad/image/upload/v1604176633/YelpCamp/ggg_jzwwid.png">
