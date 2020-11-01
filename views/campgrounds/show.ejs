@@ -13,7 +13,7 @@
             <div class="carousel-inner">
                 <% campground.images.forEach((img, i) => {  %>
                 <div class="carousel-item <%= i === 0 ? 'active' : ''%> crop">
-                    <img src="<%= img.homeCropped%>" class="d-block w-100" alt="">
+                    <img src="<%= img.homeCrop%>" class="d-block w-100 text-center" alt="">
                 </div>
                 <% }) %>
 
@@ -48,9 +48,6 @@
                 </form>
             </div>
             <% } %>
-            <div class="card-footer text-muted">
-                2 days ago
-            </div>
         </div>
 
     </div>
@@ -93,7 +90,6 @@
                 <p class="starability-result" data-rating="<%=review.rating%>">
                     Rated: <%= review.rating %> stars
                 </p>
-                <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username%></h6> -->
                 <p class="card-text">Review: <%= review.body %></p>
                 <%  if( currentUser && review.author.equals(currentUser._id))  {%>
                 <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
